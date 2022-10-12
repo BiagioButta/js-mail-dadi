@@ -33,4 +33,27 @@ if(check){
     
 });
 
-
+////////////////////////////////////////////////
+const tiroPc = [];
+const tiroUser = [];
+let sommaPc = 0;
+let sommaUser = 0;
+for (let i = 0; i < 6; i++) {
+    tiroPc[i] = Math.round(Math.random() ) + 1
+    tiroUser[i] = Math.round(Math.random() ) + 1
+    sommaPc = sommaPc + tiroPc[i];
+    sommaUser = sommaUser + tiroUser[i];
+}
+console.log(tiroPc, tiroUser);
+console.log(sommaPc, sommaUser);
+let dadi = document.getElementById("dadi");
+dadi.innerHTML = "<h1>Somma utente = " + sommaUser + " <br> Somma Pc = " + sommaPc + "</h1>"
+if (sommaPc > sommaUser) [
+    dadi.innerHTML += "<h2>Pc vince</h2>"
+]
+else if (sommaPc < sommaUser) {
+    dadi.innerHTML += "<h2>Utente vince</h2>"
+}
+else {
+    dadi.innerHTML += "<h2>Si ritira!</h2>"
+ }
